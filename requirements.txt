@@ -1,0 +1,28 @@
+git+https://github.com/152334H/llava-aisg
+pandas
+fairseq2
+fairseq2n
+git+https://github.com/facebookresearch/seamless_communication
+
+openai
+Pillow
+orjson
+regex
+
+faiss-gpu
+paddlepaddle-gpu==2.6.0
+paddleocr==2.7.5
+paddleclas==2.5.2
+opencv-contrib-python
+
+transformers>=4.39.1
+langdetect
+peft>=0.9
+torch==2.4.0.dev20240326+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
+torchvision==0.19.0.dev20240327+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
+torchaudio==2.2.0.dev20240327+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
+
+pydantic
+uvicorn
+fastapi
+evaluate

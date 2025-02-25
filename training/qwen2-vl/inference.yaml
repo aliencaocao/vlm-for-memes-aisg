@@ -1,0 +1,76 @@
+### model
+model_name_or_path: Qwen/Qwen2-VL-7B-Instruct
+
+### method
+stage: sft
+do_train: false
+do_eval: true
+finetuning_type: lora
+lora_target: all
+#infer_backend: vllm
+#vllm_enforce_eager: true
+
+### dataset
+dataset: aisg-meme-without-sg-memes
+dataset_dir: ../../dataset
+template: qwen2_vl
+cutoff_len: 6144
+overwrite_cache: true
+preprocessing_num_workers: 192
+tokenized_path: without_sg_tokenized
+data_seed: 42
+neat_packing: false
+dataloader_num_workers: 192
+dataloader_persistent_workers: false
+adapter_name_or_path: checkpoints/qwen2-vl-7b-r128-a256-lr1e4-without-sg-no-eval-sampling/checkpoint-250
+run_name: qwen2-vl-7b-r128-a256-lr1e4-without-sg-no-eval-sampling/checkpoint-250
+# max_samples: 8
+
+### output
+output_dir: checkpoints/qwen2-vl-7b-r128-a256-lr1e4-without-sg-no-eval-sampling
+logging_steps: 1
+save_steps: 50
+overwrite_output_dir: false
+
+### LoRA
+lora_rank: 128
+lora_alpha: 256
+lora_dropout: 0.0
+#loraplus_lr_ratio: 16
+use_rslora: false
+use_dora: false
+pissa_init: false
+pissa_convert: false
+# use_galore: true
+# galore_target: mlp,self_attn
+# galore_rank: 128
+# galore_scale: 2.0
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-4
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+ddp_timeout: 9000
+enable_liger_kernel: true
+# deepspeed: ds_z2_config.json
+optim: adamw_torch_fused
+fp16: true
+# bf16: true
+# flash_attn: fa2
+
+### eval
+eval_dataset: aisg-meme-test
+per_device_eval_batch_size: 10
+eval_strategy: steps
+eval_steps: 50
+do_sample: false
+temperature: 0.9
+min_p: 0.1
+max_new_tokens: 512
+predict_with_generate: true
+custom_metric: LastTokenClassification
+output_scores: true
+eval_accumulation_steps: 1  # needed as returning score take a lot of vram

@@ -1,0 +1,7 @@
+model_name_or_path: Qwen/Qwen2-VL-7B-Instruct
+adapter_name_or_path: checkpoints/qwen2-vl-7b-pissa-r128-a256-lr1e4-without-sg-memes-no-eval-sampling
+template: qwen2_vl
+finetuning_type: lora
+export_dir: merged_models/qwen2-vl-7b-pissa-r128-a256-lr1e4-without-sg-memes-no-eval-sampling-merged
+export_device: cuda
+export_legacy_format: false
