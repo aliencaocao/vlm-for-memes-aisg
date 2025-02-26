@@ -24,5 +24,13 @@ For W&B training logs, please contact Billy at aliencaocao@gmail.com. For other 
 ## Citation
 If you find this repository useful, please cite our paper:
 ```bibtex
-TBC
+@misc{yuxuan2025detectingoffensivememessocial,
+      title={Detecting Offensive Memes with Social Biases in Singapore Context Using Multimodal Large Language Models}, 
+      author={Cao Yuxuan and Wu Jiayang and Alistair Cheong Liang Chuen and Bryan Shan Guanrong and Theodore Lee Chong Jen and Sherman Chann Zhi Shen},
+      year={2025},
+      eprint={2502.18101},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.18101}, 
+}
 ```
