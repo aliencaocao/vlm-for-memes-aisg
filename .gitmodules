@@ -1,3 +1,5 @@
 [submodule "training/qwen2-vl/LLaMA-Factory"]
 	path = training/qwen2-vl/LLaMA-Factory
 	url = https://github.com/aliencaocao/LLaMA-Factory
+	branch = aisg-meme
+
