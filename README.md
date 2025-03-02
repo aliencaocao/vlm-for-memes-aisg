@@ -3,6 +3,8 @@
 ## Introduction
 This repository contains the code and data for the paper "Detecting Offensive Memes with Social Biases in Singapore Context Using Multimodal Large Language Models".
 
+This paper has been accepted at 3rd Workshop on Cross-Cultural Considerations in NLP (C3NLP), co-located with NAACL 2025.
+
 ## Dataset
 Dataset is open-sourced on [HuggingFace Hub](https://huggingface.co/datasets/aliencaocao/multimodal_meme_classification_singapore).
 
