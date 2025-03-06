@@ -9,8 +9,8 @@ This paper has been accepted at 3rd Workshop on Cross-Cultural Considerations in
 Dataset is open-sourced on [HuggingFace Hub](https://huggingface.co/datasets/aliencaocao/multimodal_meme_classification_singapore).
 
 ## Repository Structure
-- `dataset`: contains preprocessing scripts to scrap/convert data into an intermediary CSV format. This CSV is then converted to JSON files for SFT. For convince, the dataset uploaded to HF is already in the final form. It also contain some post processing scripts that convert from LLaVA SFT JSON format to ShareGPT format (used by LLaMA-Factory).
-- `evaluation`: evaluation scripts for model standalone and pipeline (OCR and translation). Implemented in isolated FastAPI servers for easy deployment. Also contain a JSON storing a dictionary of Singapore-specific acronyms which is used during inference. Part of the code is modified from the original [LLaVA repository](https://github.com/haotian-liu/LLaVA).
+- `dataset`: contains preprocessing scripts to scrap/convert data into an intermediary CSV format. This CSV is then converted to JSON files for SFT. For convenience, the dataset uploaded to HF is already in the final form. It also contains some post-processing scripts that convert from LLaVA SFT JSON format to ShareGPT format (used by LLaMA-Factory).
+- `evaluation`: evaluation scripts for model standalone and pipeline (OCR and translation). Implemented in isolated FastAPI servers for easy deployment. Also contains a JSON storing a dictionary of Singapore-specific acronyms which are used during inference. Part of the code is modified from the original [LLaVA repository](https://github.com/haotian-liu/LLaVA).
   - `evaluation/outputs`: contains raw outputs for each model/pipeline tested. Directly used for scoring.
 - `training`: contains 2 submodules, `LLaVA` and `qwen2-vl`. `LLaVA` is a modified version of the original LLaVA repository with fixes on training code. `qwen2-vl` contains a fork of [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) with modifications, and various training config and bash scripts. It can train both Qwen2-VL and LLaVA, but we only used it to train Qwen2-VL.
 
